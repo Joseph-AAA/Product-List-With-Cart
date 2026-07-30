@@ -1,6 +1,6 @@
 import { useCart } from "../context/CartContext";
 import orderConfirm from "/assets/images/icon-order-confirmed.svg";
-import { useState } from "react";
+
 
 
 function OrderConfirm(){
