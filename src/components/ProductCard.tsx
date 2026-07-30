@@ -46,15 +46,15 @@ function ProductCard({product} : ProductCardProps ){
    
         <div className="" >
             <div >
-                <picture >
+                <picture className=" rounded-xl">
                     <source media="(min-width: 1024px)" srcSet={desktop} />
                     <source media="(min-width: 768px)" srcSet={tablet} />
                     <source media="(min-width: 480px)" srcSet={mobile} />
-                    <img
+                    <img 
                         src={mobile}
                         alt={thumbnail}
                         
-                        className={`${isExist ? "border-3 border-[hsl(14,86%,42%)] rounded-xl " : ""}  "w-full h-auto rounded-xl"`}
+                        className={`rounded-xl ${isExist ? "border-3 border-[hsl(14,86%,42%)] rounded-xl " : ""}  "w-full h-auto rounded-xl"`}
                     />
                 </picture>
 
@@ -63,10 +63,7 @@ function ProductCard({product} : ProductCardProps ){
 
                     isExist ?  
                     
-                    
-                    
-                    
-                    
+
                                 <div className="relative bg-[hsl(14,86%,42%)]  left-1/2 -translate-x-1/2 
                                                 -translate-y-1/2 w-50 h-14 border-2 border-[hsl(7,20%,60%)] 
                                                 rounded-4xl flex justify-center items-center ">
