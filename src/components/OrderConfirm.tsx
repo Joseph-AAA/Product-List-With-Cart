@@ -4,7 +4,7 @@ import orderConfirm from "/assets/images/icon-order-confirmed.svg";
 
 
 function OrderConfirm(){
-     const {cart ,setCart, showOrderConfirm, setShowOrderConfirm} = useCart();
+     const {cart ,setCart,  setShowOrderConfirm} = useCart();
       
      function resetAll() {
             setShowOrderConfirm(false);
