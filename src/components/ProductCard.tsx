@@ -70,7 +70,7 @@ function ProductCard({product} : ProductCardProps ){
 
                                     <div className="hover:cursor-pointer  w-45 flex justify-between items-center text-[hsl(20,50%,98%)]">
                                         <span onClick={reduceQty} className="w-8 h-8 rounded-2xl border-2 border-[hsl(20,50%,98%)] 
-                                                        flex items-center justify-center  text-4xl "> - </span>
+                                                        flex items-center justify-center  text-4xl pb-1"> - </span>
                                         <span className="font-bold  text-xl">{itemQty}</span>
                                     <span onClick={handleAddToCart}  className="hover:cursor-pointer  w-8 h-8 rounded-2xl border-2 border-[hsl(20,50%,98%)] 
                                                         flex items-center justify-center  text-4xl"> + </span>
