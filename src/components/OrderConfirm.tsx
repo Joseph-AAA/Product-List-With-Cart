@@ -21,12 +21,12 @@ function OrderConfirm(){
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 ">
             <div className=" w-full flex items-center justify-center p-4 ">
                 <div className="  max-h-[90vh] overflow-y-auto bg-[hsl(20,50%,98%)] rounded-2xl w-[90%] max-w-xl p-5 ">
-                                        <div className="w-full   h-20 grid items-center mb-25 pl-3 mt-5 ">
-                                            <img src={orderConfirm} alt="checked.png"/>
-                                            <h1 className="text-[hsl(14,65%,9%)] mt-4 font-bold text-4xl">
+                                        <div className="w-full   h-20 grid items-center pl-6 mb-25  mt-5 ">
+                                            <img src={orderConfirm} alt="checked.png "/>
+                                            <h1 className="text-[hsl(14,65%,9%)] mt-4 font-bold pl-2 text-4xl">
                                                 Order Confirmed
                                             </h1>
-                                            <p className="text-[hsl(14,25%,72%)]">We hope you enjoy your food</p>
+                                            <p className="text-[hsl(14,25%,72%)] pl-3">We hope you enjoy your food</p>
                                         </div>
 
                                     

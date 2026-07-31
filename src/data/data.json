@@ -106,18 +106,6 @@
       "tablet": "/assets/images/image-panna-cotta-tablet.jpg",
       "desktop": "/assets/images/image-panna-cotta-desktop.jpg"
     }
-  },
-    {
-    "id": 10,
-    "category": "Panna Cotta",
-    "name": "Vanilla Panna Cotta",
-    "price": 6.5,
-    "image": {
-      "thumbnail": "/assets/images/image-panna-cotta-thumbnail.jpg",
-      "mobile": "/assets/images/image-panna-cotta-mobile.jpg",
-      "tablet": "/assets/images/image-panna-cotta-tablet.jpg",
-      "desktop": "/assets/images/image-panna-cotta-desktop.jpg"
-    }
   }
   
 ]
