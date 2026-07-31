@@ -23,7 +23,7 @@ function ProductList({products} : ProductCardProps) {
 
 console.log(showOrderConfirm);
     return(
-        <div className="w-full max-w-[1600px]  m-20 grid grid-cols-1 xl:grid-cols-[7fr_3fr] gap-8">
+        <div className="w-full max-w-[1600px]  lg:m-20 m-14 grid grid-cols-1 xl:grid-cols-[7fr_3fr] gap-8">
             
             <div className="">
                 <h1 className="text-5xl font-extrabold mb-10">Desserts</h1>
