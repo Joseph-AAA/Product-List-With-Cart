@@ -22,7 +22,15 @@ function OrderConfirm(){
             <div className=" w-full flex items-center justify-center p-4 ">
                 <div className="  max-h-[90vh] overflow-y-auto bg-[hsl(20,50%,98%)] rounded-2xl w-[90%] max-w-xl p-5 ">
                                         <div className="w-full   h-20 grid items-center pl-6 mb-25  mt-5 ">
-                                            <img src={orderConfirm} alt="checked.png "/>
+                                            <div className="w-[90%] flex items-center justify-between gap-2">
+                                                <img src={orderConfirm} className="w-10" alt="icon-order-confirmed"/>
+                                                <span onClick={resetAll}  className="w-10 h-10 hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
+                                                                       text-[hsl(7,20%,60%)]      font-bold text-xl items-center rounded-md flex justify-center">
+                                                                    X
+                                                </span>
+                                            </div>
+                                            
+
                                             <h1 className="text-[hsl(14,65%,9%)] mt-4 font-bold pl-2 text-4xl">
                                                 Order Confirmed
                                             </h1>

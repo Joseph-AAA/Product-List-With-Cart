@@ -10,4 +10,3 @@ export type Product = {
         desktop : string
     };
 };
-

@@ -1,5 +1,5 @@
-import type { Product } from "../types/product";
-import addToCart from "/assets/images/icon-add-to-cart.svg"
+import type { Product } from "../types/prodcut";
+import addToCartImg from "/assets/images/icon-add-to-cart.svg"
 import { useCart } from "../context/CartContext";
 type ProductCardProps = {
     product: Product;
@@ -17,30 +17,24 @@ function ProductCard({product} : ProductCardProps ){
      } = product ;
 
 
-       const { cart, setCart } = useCart();    /* here we destructure cart , setCart which */
-       const isExist = cart.find((item)=>(item.id===product.id));
-       const itemQty = cart.find((item) => item.id === id)?.quantity ?? 0 ; /*နိပ်လိုက်တဲ့ id စစ်ပြီး qty ရှိလားမရှိလား စစ်ပြီး undfeined ရှိရင် သုညပေးမယ်။*/ 
+       const { cart, addToCart, increaseQty, decreaseQty } = useCart();    /* here we destructure cart , setCart which */
+       /*နိပ်လိုက်တဲ့ id စစ်ပြီး qty ရှိလားမရှိလား စစ်ပြီး undfeined ရှိရင် သုညပေးမယ်။*/ 
 
    
-       function handleAddToCart() {
+    //    function increaseQty() {
                     
-            if(isExist){
-                setCart((prev)=>prev.map((item)=>item.id === id ? {...item,quantity : item.quantity + 1} : item))
-            }else{
+       const cartItem = cart.find((item) => item.id === product.id);
+       const itemQty = cartItem?.quantity ?? 0;
 
-                setCart ((prev)=>[...prev,{...product,quantity : 1}])
-            }
-    }
-
-     function reduceQty() {
-                if(itemQty > 1) {               
-                        setCart((prev)=>prev.map((item)=>item.id === id ? {...item,quantity : item.quantity - 1} : item))
-                }else{
-                     setCart((prev) =>
-                            prev.filter((item) => item.id !== id)
-                        ); 
-                }
-    }
+    //  function reduceQty() {
+    //             if(itemQty > 1) {               
+    //                     setCart((prev)=>prev.map((item)=>item.id === id ? {...item,quantity : item.quantity - 1} : item))
+    //             }else{
+    //                  setCart((prev) =>
+    //                         prev.filter((item) => item.id !== id)
+    //                     ); 
+    //             }
+    // }
 
     return(
    
@@ -54,14 +48,14 @@ function ProductCard({product} : ProductCardProps ){
                         src={mobile}
                         alt={thumbnail}
                         
-                        className={`rounded-xl ${isExist ? "border-3 border-[hsl(14,86%,42%)] rounded-xl " : ""}  "w-full h-auto rounded-xl"`}
+                        className={`rounded-xl ${cartItem ? "border-3 border-[hsl(14,86%,42%)] rounded-xl " : ""}  "w-full h-auto rounded-xl"`}
                     />
                 </picture>
 
                 {
 /* *****************************************************Add to Cart**************************************************** */
 
-                    isExist ?  
+                    cartItem ?  
                     
 
                                 <div className="relative bg-[hsl(14,86%,42%)]  left-1/2 -translate-x-1/2 
@@ -69,10 +63,10 @@ function ProductCard({product} : ProductCardProps ){
                                                 rounded-4xl flex justify-center items-center ">
 
                                     <div className="hover:cursor-pointer  w-45 flex justify-between items-center text-[hsl(20,50%,98%)]">
-                                        <span onClick={reduceQty} className="w-8 h-8 rounded-2xl border-2 border-[hsl(20,50%,98%)] 
+                                        <span onClick={()=>decreaseQty(id)} className="w-8 h-8 rounded-2xl border-2 border-[hsl(20,50%,98%)] 
                                                         flex items-center justify-center  text-4xl pb-1"> - </span>
                                         <span className="font-bold  text-xl">{itemQty}</span>
-                                    <span onClick={handleAddToCart}  className="hover:cursor-pointer  w-8 h-8 rounded-2xl border-2 border-[hsl(20,50%,98%)] 
+                                    <span onClick={()=>increaseQty(id)}  className="hover:cursor-pointer  w-8 h-8 rounded-2xl border-2 border-[hsl(20,50%,98%)] 
                                                         flex items-center justify-center  text-4xl"> + </span>
 
                                     </div>
@@ -83,13 +77,13 @@ function ProductCard({product} : ProductCardProps ){
    
 /* *******************************************************button**************************************************** */
 
-                                <button  onClick={handleAddToCart} className="hover:cursor-pointer 
+                                <button  onClick={()=>addToCart(product)} className="hover:cursor-pointer 
                                                 hover:border-[hsl(14,86%,42%)] 
                                                 hover:text-[hsl(14,86%,42%)] relative left-1/2 -translate-x-1/2 
                                                 -translate-y-1/2 w-50 h-14 border-2 border-[hsl(7,20%,60%)] 
                                                 bg-[hsl(20,50%,98%)] flex justify-center items-center gap-3 
                                                 rounded-4xl ">
-                                        <img className="w-8 " src={addToCart} alt="Add to Cart" />
+                                        <img className="w-8 " src={addToCartImg} alt="Add to Cart" />
                                         <p className="font-bold">Add to Cart</p>
                                 </button>
                 }
