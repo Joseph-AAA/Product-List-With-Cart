@@ -49,11 +49,11 @@ console.log(showOrderConfirm);
                                                    <div className=" w-full h-20  flex items-center flex-col mb-3">
                                                         <div className="w-[85%] flex justify-center h-full  border-b-2  border-[hsl(13,31%,94%)]">
                                                             <div className="w-full grid  min-h-20  gap-1 pb-5 rounded-2xl">
-                                                                    <label className="pt-1 font-bold">{item.name}</label>
-                                                                <div className="flex gap-5">
-                                                                        <span className="text-[hsl(14,86%,42%)] font-bold text-lg">{item.quantity}x</span>
-                                                                        <span className="text-[hsl(14,25%,72%)]  text-lg">@ {item.price.toFixed(2)}</span>
-                                                                        <span  className="text-[hsl(7,20%,60%)] font-bold text-lg">${(item.quantity * item.price).toFixed(2)}</span>
+                                                                    <label className="pt-1 font-bold text-sm md:text-lg">{item.name}</label>
+                                                                <div className="flex gap-1 md:gap-5">
+                                                                        <span className="text-[hsl(14,86%,42%)] font-bold text-sm md:text-lg">{item.quantity}x</span>
+                                                                        <span className="text-[hsl(14,25%,72%)]  text-sm md:text-lg">@ {item.price.toFixed(2)}</span>
+                                                                        <span  className="text-[hsl(7,20%,60%)] font-bold text-sm md:text-lg">${(item.quantity * item.price).toFixed(2)}</span>
                                                                     </div>
                                                                     
                                                             </div>
@@ -62,9 +62,9 @@ console.log(showOrderConfirm);
                                                           
                                                             <button  className="flex items-center justify-center pb-5 rounded-4xl gap-2">
                                                                
-                                                                <span onClick={()=>decreaseQty(item.id)} className="w-6 h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
+                                                                <span onClick={()=>decreaseQty(item.id)} className="xl:hidden w-6 h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
                                                                       flex items-center justify-center text-[hsl(7,20%,60%)] text-4xl pb-1"> - </span>
-                                                                 <span onClick={()=>increaseQty(item.id)} className="w-6 h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
+                                                                 <span onClick={()=>increaseQty(item.id)} className="xl:hidden w-6 h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
                                                                       flex items-center justify-center pt-1 text-[hsl(7,20%,60%)] text-3xl pb-1"> + </span>
                                                                  <span onClick={()=>deleteItem(item.id)} className="w-6 h-6 hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
                                                                                 rounded-4xl flex justify-center">

@@ -45,16 +45,14 @@ function OrderConfirm(){
                                                         <div className="w-[85%] flex justify-center h-full  border-b-2  border-[hsl(13,31%,94%)]">
                                                             <div className="w-full grid  min-h-20  gap-1 pb-5 rounded-2xl">
                                                                     <label className="pt-1 font-bold">{item.name}</label>
-                                                                <div className="flex gap-5">
-                                                                        <span className="text-[hsl(14,86%,42%)] font-bold text-lg">{item.quantity}x</span>
-                                                                        <span className="text-[hsl(14,25%,72%)]  text-lg">@ {item.price.toFixed(2)}</span>
-                                                                        <span  className="text-[hsl(7,20%,60%)] font-bold text-lg">${(item.quantity * item.price).toFixed(2)}</span>
-                                                                    </div>
+                                                                <div className="flex gap-2 md:gap-5">
+                                                                        <span className="text-[hsl(14,86%,42%)] font-bold text-sm md:text-lg">{item.quantity}x</span>
+                                                                        <span className="text-[hsl(14,25%,72%)]  text-sm md:text-lg">@ {item.price.toFixed(2)}</span>
+                                                                        <span  className="text-[hsl(7,20%,60%)] font-bol text-sm md:text-lg">${(item.quantity * item.price).toFixed(2)}</span>
+                                                                </div>
                                                                     
                                                             </div>
-
-{/* *************************************************************Delete Button*********************************************************************************************************************** */}
-                                                          
+    
                                                        </div>
                                                     </div>
                                             )
