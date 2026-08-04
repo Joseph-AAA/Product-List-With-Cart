@@ -31,7 +31,7 @@ function OrderConfirm(){
                                             </div>
                                             
 
-                                            <h1 className="text-[hsl(14,65%,9%)] mt-4 font-bold pl-2 text-4xl">
+                                            <h1 className="text-[hsl(14,65%,9%)] mt-4 font-bold pl-2 text-3xl md:text-4xl">
                                                 Order Confirmed
                                             </h1>
                                             <p className="text-[hsl(14,25%,72%)] pl-3">We hope you enjoy your food</p>
@@ -64,7 +64,7 @@ function OrderConfirm(){
                                      <div className="flex flex-col w-full items-center gap-5 mt-5 mb-5">
                                         <div className="flex justify-between w-[90%] pl-5 pr-5 h-15  items-center ">
                                             <span className="text-[hsl(12,20%,44%)]">Order Total</span>
-                                            <span className="font-bold text-3xl">${total.toFixed(2)}</span>
+                                            <span className="font-bold text-2xl md:text-3xl">${total.toFixed(2)}</span>
                                         </div>
                                         <div className="flex justify-center items-center gap-2 w-[85%] pl-5 pr-5 h-15 bg-[hsl(13,31%,94%)] rounded-xl ">
                                             <img src="/assets/images/icon-carbon-neutral.svg" className="w-6" alt="icon-carbon-neutral"/>
