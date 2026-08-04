@@ -62,11 +62,11 @@ console.log(showOrderConfirm);
                                                           
                                                             <button  className="flex items-center justify-center pb-5 rounded-4xl gap-2">
                                                                
-                                                                <span onClick={()=>decreaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 lg:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
+                                                                <span onClick={()=>decreaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
                                                                       flex items-center justify-center text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> - </span>
-                                                                 <span onClick={()=>increaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 lg:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
+                                                                 <span onClick={()=>increaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
                                                                       flex items-center justify-center pt-1 text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> + </span>
-                                                                 <span onClick={()=>deleteItem(item.id)} className="w-5 h-5 md:w-6 lg:h-6 hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
+                                                                 <span onClick={()=>deleteItem(item.id)} className="w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
                                                                                 rounded-4xl flex justify-center">
                                                                     <img src="/assets/images/icon-remove-item.svg" className="w-2 md:w-3"/>
                                                                 </span>
