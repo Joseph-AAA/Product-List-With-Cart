@@ -39,7 +39,7 @@ console.log(showOrderConfirm);
                         
                         <div className=" self-start min-h-88 bg-[hsl(20,50%,98%)] rounded-2xl grid">
                                         <div className="w-full  h-20 flex  items-center mb-5 mt-5 ">
-                                            <h1 className="text-[hsl(14,86%,42%)] pl-10 font-bold text-2xl md:text-3xl">Your Cart ({cart.length}) </h1>
+                                            <h1 className="text-[hsl(14,86%,42%)] pl-10 font-bold text-xl md:text-3xl">Your Cart ({cart.length}) </h1>
                                         </div>
 
                                     
@@ -86,7 +86,7 @@ console.log(showOrderConfirm);
                                         </div>
                                         <div className="flex justify-center items-center gap-2 w-[85%] pl-5 pr-5 h-15 bg-[hsl(13,31%,94%)] rounded-xl ">
                                             <img src="/assets/images/icon-carbon-neutral.svg" className="w-6" alt="icon-carbon-neutral"/>
-                                            <span > This is a <b> carbon-neutral </b> delivery</span>
+                                            <span className="text-sm md:text-md"> This is a <b> carbon-neutral </b> delivery</span>
                                         </div>
                                         <div onClick={()=>setShowOrderConfirm(true)} className="hover:cursor-pointer flex justify-center bg-[hsl(14,86%,42%)] gap-2 w-[85%] h-15 rounded-4xl">
                                             <button onClick={()=>setShowOrderConfirm(true)} className=" hover:cursor-pointer font-semibold text-white">Confirm Order</button>
@@ -102,7 +102,7 @@ console.log(showOrderConfirm);
 {/* *************************************************************  Your Cart ************************************************************************************** */}
 
                                     <div className="w-full  flex  items-center ">
-                                        <h1 className="text-[hsl(14,86%,42%)] pl-10 font-bold text-3xl">Your Cart (0) </h1>
+                                        <h1 className="text-[hsl(14,86%,42%)] pl-10 font-bold text-xl md:text-3xl">Your Cart (0) </h1>
                                     </div>
 
                                     <div className=" w-full justify-center items-center flex flex-col">
