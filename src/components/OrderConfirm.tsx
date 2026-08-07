@@ -50,12 +50,12 @@ function OrderConfirm(){
                                                                 <div className="w-[90%] flex justify-center items-center h-full bg-[hsl(13,31%,94%)] border-b   border-[hsl(13,21%,87%)]">
                                                                     
                                                                     <div className="w-full flex gap-2 md:gap-5 items-center  ">
-                                                                        <img src={item.image.thumbnail} className="w-10 h-10 md:w-12 md:h-12 rounded-xl" alt={item.name}/>
+                                                                        <img src={item.image.thumbnail} className="w-10 h-10 md:w-12 md:h-12 rounded-[5]" alt={item.name}/>
                                                                         <div className="w-full grid items-center   rounded-2xl">
                                                                                
                                                                             <div className="flex gap-2 md:gap-5 justify-between items-center">
                                                                                     <div className="grid ">
-                                                                                         <label className=" font-bold text-[10px] md:text-xl">{item.name}</label>
+                                                                                         <label className=" font-bold text-[12px] md:text-lg">{item.name}</label>
                                                                                          <span className="text-[hsl(14,86%,42%)] font-bold text-[10px] md:text-lg">{item.quantity}x</span>
                                                                                     {/* <span className="text-[hsl(14,25%,72%)]  text-sm md:text-lg">@ {item.price.toFixed(2)}</span> */}
                                                                                   
@@ -73,7 +73,7 @@ function OrderConfirm(){
                                         }
                                         <div className="flex justify-center w-full pl-5 pr-5 h-20 items-center ">
                                                 <div className="flex justify-between w-[90%]  h-15 items-center ">
-                                                    <span className="text-[hsl(14,65%,9%)] text-[12px] md:text-md">Order Total</span>
+                                                    <span className="text-[hsl(14,65%,9%)] text-md md:text-xl">Order Total</span>
                                                     <span className="font-bold text-[15px] md:text-3xl">${total.toFixed(2)}</span>
                                                 </div>
                                         </div>

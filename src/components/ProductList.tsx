@@ -69,8 +69,9 @@ console.log(showOrderConfirm);
                                                                       flex items-center justify-center text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> - </button>
                                                                  <button onClick={()=>increaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
                                                                      hover:text-black hover:border-black flex items-center justify-center pt-1 text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> + </button>
-                                                                 <button onClick={()=>deleteItem(item.id)} className="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center hover:text-black hover:font-bold hover:border-black hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
-                                                                                rounded-4xl flex justify-center">
+                                                                 <button onClick={()=>deleteItem(item.id)} className="w-5 h-5 text-[hsl(7,20%,60%)] text-sm md:text-lg md:w-6 md:h-6 flex items-center justify-center
+                                                                  hover:text-black hover:font-bold hover:border-black hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
+                                                                                rounded-4xl ">
                                                                     X
                                                                 </button>
                                                             </div>
@@ -83,9 +84,9 @@ console.log(showOrderConfirm);
 {/* *************************************************************Order Total / Carbon-neutural / Confrim Order *********************************************************************************************************************** */}
                                     
                                      <div className="flex flex-col w-full items-center gap-5 mt-5 mb-5">
-                                        <div className="flex justify-between w-[90%] pl-5 pr-5 h-15  items-center ">
-                                            <span className="text-[hsl(12,20%,44%)]">Order Total</span>
-                                            <span className="font-bold text-2xl md:text-3xl">${total.toFixed(2)}</span>
+                                        <div className="flex justify-between w-[85%]  h-15  items-center ">
+                                            <span className="text-[hsl(12,20%,44%)] text-md md:text-xl">Order Total</span>
+                                            <span className="font-bold text-xl md:text-3xl">${total.toFixed(2)}</span>
                                         </div>
                                         <div className="flex justify-center items-center gap-2 w-[85%] pl-5 pr-5 h-15 bg-[hsl(13,31%,94%)] rounded-xl ">
                                             <img src="/assets/images/icon-carbon-neutral.svg" className="w-6" alt="icon-carbon-neutral"/>
