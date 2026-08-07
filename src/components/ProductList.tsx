@@ -38,9 +38,11 @@ console.log(showOrderConfirm);
          {(cart.length>0) ?    
                         
                         <div className=" self-start min-h-88 bg-[hsl(20,50%,98%)] rounded-2xl grid">
-                                        <div className="w-full  h-20 flex  items-center mb-5 mt-5 ">
-                                            <h1 className="text-[hsl(14,86%,42%)] pl-10 font-bold text-xl md:text-3xl">Your Cart ({cart.length}) </h1>
-                                        </div>
+                                        <div className="w-full  h-20 flex  justify-center items-center mb-5 mt-5 ">
+                                            <div className="w-[85%] flex justify-between items-center ">
+                                                <h1 className="text-[hsl(14,86%,42%)]  font-bold text-xl md:text-3xl">Your Cart ({cart.length}) </h1>
+                                            </div>
+                                            </div>
 
                                     
                                      {
@@ -60,17 +62,18 @@ console.log(showOrderConfirm);
 
 {/* *************************************************************Delete Button*********************************************************************************************************************** */}
                                                           
-                                                            <button  className="flex items-center justify-center pb-5 rounded-4xl gap-2">
+                                                            <div  className="flex items-center justify-center pb-5 rounded-4xl gap-2">
                                                                
-                                                                <span onClick={()=>decreaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
-                                                                      flex items-center justify-center text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> - </span>
-                                                                 <span onClick={()=>increaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
-                                                                      flex items-center justify-center pt-1 text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> + </span>
-                                                                 <span onClick={()=>deleteItem(item.id)} className="w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
+                                                                <button onClick={()=>decreaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 md:h-6
+                                                                    hover:text-black hover:border-black hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
+                                                                      flex items-center justify-center text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> - </button>
+                                                                 <button onClick={()=>increaseQty(item.id)} className="xl:hidden w-5 h-5 md:w-6 md:h-6 hover:cursor-pointer rounded-4xl border-2 border-[hsl(7,20%,60%)] 
+                                                                     hover:text-black hover:border-black flex items-center justify-center pt-1 text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> + </button>
+                                                                 <button onClick={()=>deleteItem(item.id)} className="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center hover:text-black hover:font-bold hover:border-black hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
                                                                                 rounded-4xl flex justify-center">
-                                                                    <img src="/assets/images/icon-remove-item.svg" className="w-2 md:w-3"/>
-                                                                </span>
-                                                            </button>
+                                                                    X
+                                                                </button>
+                                                            </div>
                                                        </div>
                                                     </div>
                                             )
@@ -101,8 +104,11 @@ console.log(showOrderConfirm);
 
 {/* *************************************************************  Your Cart ************************************************************************************** */}
 
-                                    <div className="w-full  flex  items-center ">
-                                        <h1 className="text-[hsl(14,86%,42%)] pl-10 font-bold text-xl md:text-3xl">Your Cart (0) </h1>
+                                    <div className="w-full  flex justify-center items-center ">
+                                        
+                                        <div className="w-[85%] flex  items-center ">
+                                                <h1 className="text-[hsl(14,86%,42%)]  font-bold text-xl md:text-3xl">Your Cart (0) </h1>
+                                            </div>
                                     </div>
 
                                     <div className=" w-full justify-center items-center flex flex-col">
