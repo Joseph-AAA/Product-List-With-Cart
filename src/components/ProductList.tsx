@@ -71,7 +71,7 @@ console.log(showOrderConfirm);
                                                                      hover:text-black hover:border-black flex items-center justify-center pt-1 text-[hsl(7,20%,60%)] text-xl md:text-4xl pb-1"> + </button>
                                                                  <button onClick={()=>deleteItem(item.id)} className="w-5 h-5 text-[hsl(7,20%,60%)] text-sm md:text-lg md:w-6 md:h-6 flex items-center justify-center
                                                                   hover:text-black hover:font-bold hover:border-black hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
-                                                                                rounded-4xl ">
+                                                                                rounded-4xl pt-0.5">
                                                                     X
                                                                 </button>
                                                             </div>

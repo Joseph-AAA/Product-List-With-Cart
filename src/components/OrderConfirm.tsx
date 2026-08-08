@@ -22,20 +22,21 @@ function OrderConfirm(){
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 ">
             <div className=" w-full flex items-center justify-center p-4 ">
                 <div className=" max-h-[90vh] overflow-y-auto bg-[hsl(20,50%,98%)] rounded-2xl w-[90%] max-w-xl p-5  ">
-                                        <div className="w-full   h-25 grid items-center pl-0 md:pl-6 mb-25 md:mb-15  mt-5 ">
-                                            <div className="w-[90%] flex items-center justify-between gap-2">
-                                                <img src={orderConfirm} className="w-12 pl-2" alt="icon-order-confirmed"/>
+                                        <div className="w-full    h-25 flex flex-col items-center pl-0 mb-25 md:mb-15  mt-5 ">
+                                            <div className="w-[85%] flex items-center justify-between ">
+                                                <img src={orderConfirm} className="w-12" alt="icon-order-confirmed"/>
                                                 <span onClick={resetAll}  className="w-10 h-10 hover:cursor-pointer  border-2 border-[hsl(7,20%,60%)] 
-                                                                       text-[hsl(7,20%,60%)]      font-bold text-xl items-center rounded-lg flex justify-center">
+                                                                       text-[hsl(7,20%,60%)]  font-bold text-xl items-center rounded-lg flex justify-center">
                                                                     X
                                                 </span>
                                             </div>
                                             
-
-                                            <h1 className="text-[hsl(14,65%,9%)] mt-4 font-bold pl-2 pb-3 text-4xl md:text-4xl">
-                                                Order Confirmed
-                                            </h1>
-                                            <p className="text-[hsl(14,25%,72%)] pl-3">We hope you enjoy your food</p>
+                                            <div className="w-[85%] flex flex-col items-start justify-center mb-5">
+                                                <h1 className="text-[hsl(14,65%,9%)] mt-4 font-bold pb-3 text-4xl md:text-4xl">
+                                                     Order Confirmed
+                                                </h1>
+                                                 <p className="text-[hsl(14,25%,72%)] ">We hope you enjoy your food</p>
+                                            </div>
                                         </div>
 
                                 <div className="w-full mb-5 justify-center items-center rounded-2xl flex flex-col ">
@@ -50,17 +51,17 @@ function OrderConfirm(){
                                                                 <div className="w-[90%] flex justify-center items-center h-full bg-[hsl(13,31%,94%)] border-b   border-[hsl(13,21%,87%)]">
                                                                     
                                                                     <div className="w-full flex gap-2 md:gap-5 items-center  ">
-                                                                        <img src={item.image.thumbnail} className="w-10 h-10 md:w-12 md:h-12 rounded-[5]" alt={item.name}/>
+                                                                        <img src={item.image.thumbnail} className=" w-10 h-10 md:w-12 md:h-12 rounded-md" alt={item.name}/>
                                                                         <div className="w-full grid items-center   rounded-2xl">
                                                                                
                                                                             <div className="flex gap-2 md:gap-5 justify-between items-center">
                                                                                     <div className="grid ">
-                                                                                         <label className=" font-bold text-[12px] md:text-lg">{item.name}</label>
-                                                                                         <span className="text-[hsl(14,86%,42%)] font-bold text-[10px] md:text-lg">{item.quantity}x</span>
+                                                                                         <label className=" font-bold text-[13px] md:text-lg truncate">{item.name}</label>
+                                                                                         <span className="text-[hsl(14,86%,42%)] font-bold text-[13px] md:text-lg">{item.quantity}x</span>
                                                                                     {/* <span className="text-[hsl(14,25%,72%)]  text-sm md:text-lg">@ {item.price.toFixed(2)}</span> */}
                                                                                   
                                                                                     </div>
-                                                                                    <span  className="text-[hsl(14,65%,9%)] font-bold text-[12px] md:text-xl ">${(item.quantity * item.price).toFixed(2)}</span>
+                                                                                    <span  className="text-[hsl(14,65%,9%)] font-bold text-[13px] md:text-xl ">${(item.quantity * item.price).toFixed(2)}</span>
                                                                             </div>
                                                                                 
                                                                         </div>
